@@ -1,0 +1,1 @@
+Working through the codility curriculum.
