@@ -15,8 +15,8 @@ const binaryGap = (N) => {
     for (let i = 0; i < hits.length - 1; i++) {
         gap = hits[i + 1] - hits[i] - 1;
         binaryGap = binaryGap < gap ? gap : binaryGap;
-    }
+    };
     return binaryGap;
-}
+};
 
 module.exports = binaryGap;

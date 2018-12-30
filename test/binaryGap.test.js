@@ -24,5 +24,5 @@ describe('Binary Gap', () => {
         it('returns 5 given 1041', () => {
             expect(binaryGap(1041)).to.equal(5);
         });
-    })
-})
+    });
+});
