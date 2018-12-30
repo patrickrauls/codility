@@ -1,0 +1,20 @@
+{
+  "name": "codility",
+  "version": "1.0.0",
+  "description": "Working through the codility lessons",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -w"
+  },
+  "repository": "git+https://github.com/patrickrauls/codility.git",
+  "author": "Patrick Rauls",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrickrauls/codility/issues"
+  },
+  "homepage": "https://github.com/patrickrauls/codility#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
