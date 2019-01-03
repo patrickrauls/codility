@@ -33,3 +33,9 @@ Essentially the operator allows me to keep a running tab of everything that does
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingUCPUTY-BHE/)
 
 Not much to this one. The premise of the lessons for this unit seem to amount to finding ways to minimize the amount of loops you do in addressing these problems. For the frog jump problem it was immediately apparent to me that no loops would be necessary. I could simply divide the difference between point X and Y by the distance D the frog jumps. I would then return the result rounded up to the nearest integer. It seemed to check out fine.
+
+### Day Five: Time Complexity - Permutation Missing Element
+
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingNHFY3Z-G7W/)
+
+I use our beloved bitwise XOR again on this problem. That's becuase this problem is variation on the odd occurrences in an array problem. Consider that being held in the array is a permutation starting from 1 to n + 1, but missing one number. Because every array has a built in permutation known as its indices, I can consider those indices (each index plus one as it is zero indexed but our permutation starts from one) as the matches to the integers. I end up with one odd occurrence, the index (plus one) that is missing a matching integer that would complete the permutation.
