@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 const permMissingElem = require('../permMissingElem');
 
-describe('Frog Jump', () => {
+describe('Permutation Missing Element', () => {
     it('returns a number', () => {
         expect(permMissingElem([2])).to.be.a('number');
     });

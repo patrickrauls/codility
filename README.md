@@ -39,3 +39,9 @@ Not much to this one. The premise of the lessons for this unit seem to amount to
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingNHFY3Z-G7W/)
 
 I use our beloved bitwise XOR again on this problem. That's becuase this problem is variation on the odd occurrences in an array problem. Consider that being held in the array is a permutation starting from 1 to n + 1, but missing one number. Because every array has a built in permutation known as its indices, I can consider those indices (each index plus one as it is zero indexed but our permutation starts from one) as the matches to the integers. I end up with one odd occurrence, the index (plus one) that is missing a matching integer that would complete the permutation.
+
+### Day Six: Time Complexity - Tape Equilibrium
+
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingYA3N4F-FTS/)
+
+I'm not super-impressed with the readability or concision of this answer, but I solve the problem with linear complexity, so I guess it's fine. Perhaps I'll improve on it later. The most accessible way I could think to handle this problem without nesting loops was to first sum the array. Then as I iterate through the array, add the integer at the step to some accumulator, while subtracting that array from the sum, and taking the difference of those two values. I store that difference in a variable, changing it only in those iterations where the difference produces something smaller than what is already there. I chose to actually start that variable with the result of the first element minus the sum of the remaining elements. I then start iterating with the remaining elements if there are any.
