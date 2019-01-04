@@ -11,7 +11,7 @@ const solution = (A) => {
         accumulator += A[i];
         decumulator -= A[i];
         difference = Math.abs(accumulator - decumulator);
-        equilibrium = equilibrium > difference ? difference : equilibrium;
+        equilibrium = Math.min(difference, equilibrium);
     }
     return equilibrium;
 };
