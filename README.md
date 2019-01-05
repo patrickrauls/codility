@@ -51,3 +51,8 @@ I'm not super-impressed with the readability or concision of this answer, but I 
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingEBFGEG-VXT/)
 
 Thank you magic of the bitwise XOR. Here we have another variation on permutations. This time we're checking if an array is a permutation. As I mentioned before, the indices of an array are a permutation is you add one to each index. Therefore, checking if the elements of an array create a permutation is as straightforward as matching them against each index of the array, plus one. We do that with our friend bitwise XOR. It basically accumulates the elements in the variable we're setting it equal to, shedding the element and its match when that match is incorporated in the variable. Basically it does the work for us. We need only to adjust our return value to make sure we're returning 1 if the xor is zeroed out, and zero otherwise.
+
+### Day Eight: Counting Elements - Frog River One
+
+[Find my answer on codility here](https://app.codility.com/demo/results/training764WSY-2CJ/)
+This one gave me a little more trouble than I'd care to admit. In the end I decided to go with a round about way of deduping the array by flipping the indices and elements and putting them in a new array with no overwriting when the array has already been populated at that index. Then I return the maximum value in the new array, provided there are no undefined values in the array, in which case I return -1 because the Frog can't make it across.
