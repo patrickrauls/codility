@@ -60,7 +60,6 @@ This one gave me a little more trouble than I'd care to admit. In the end I deci
 
 ### Day Nine: Counting Elements - Missing Integer
 
-[Find my answer on codility here](https://app.codility.com/demo/results/training26EPHT-WZ5/)
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingJPPW87-YS7/)
 
-More xor. Another way of looking at this problem is finding where the permutation ends, either by missing a number or by hitting the array's limit. First, however, I want to get rid of info I'm not interested in like duplicate numbers and non-positive numbers. After that I loop through the array until the element no longer matches my iterator plus 1. When the loop breaks, I can return my iterator plus one to get my answer.
-
+Often these problems come down to figuring out what to ignore and what to take some action on. In this case the core of my answer is using a reduce to iterate through a sorted array, starting my accumulator at the smallest value my answer could have, 1, and incrementing it every time the element is equal to the accumulator. In the end I return the accumulator for a solution with linear time complexity.
