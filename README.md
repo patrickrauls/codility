@@ -55,4 +55,12 @@ Thank you magic of the bitwise XOR. Here we have another variation on permutatio
 ### Day Eight: Counting Elements - Frog River One
 
 [Find my answer on codility here](https://app.codility.com/demo/results/training764WSY-2CJ/)
+
 This one gave me a little more trouble than I'd care to admit. In the end I decided to go with a round about way of deduping the array by flipping the indices and elements and putting them in a new array with no overwriting when the array has already been populated at that index. Then I return the maximum value in the new array, provided there are no undefined values in the array, in which case I return -1 because the Frog can't make it across.
+
+### Day Nine: Counting Elements - Missing Integer
+
+[Find my answer on codility here](https://app.codility.com/demo/results/training26EPHT-WZ5/)
+
+More xor. Another way of looking at this problem is finding where the permutation ends, either by missing a number or by hitting the array's limit. First, however, I want to get rid of info I'm not interested in like duplicate numbers and non-positive numbers. After that I loop through the array until the element no longer matches my iterator plus 1. When the loop breaks, I can return my iterator plus one to get my answer.
+
