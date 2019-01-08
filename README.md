@@ -63,3 +63,9 @@ This one gave me a little more trouble than I'd care to admit. In the end I deci
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingJPPW87-YS7/)
 
 Often these problems come down to figuring out what to ignore and what to take some action on. In this case the core of my answer is using a reduce to iterate through a sorted array, starting my accumulator at the smallest value my answer could have, 1, and incrementing the accumulator only when the element is equal to the accumulator. In the end I return the accumulator for a solution with linear time complexity.
+
+### Day Ten: Counting Elements - Max Counters
+
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingNZBABJ-G9M/)
+
+I took this problem pretty literally and set up actual counters the logged every occurrence of a particular integer. I also have a couple of variables I'll use to mark my highest counter `ceiling` as well as what my highest counter was at during the latest max counter operation `floor`. `floor` is useful during my loop only in terms of when I need to set it because the trigger of an element equal to `N + 1` has occurred. I also need to read it when I'm incrementing a counter in case that counter doesn't meet the floor. In that case I would set the counter equal to `floor + 1`. If I keep up with my changes in that way, I can set each element of the array to the Max of the floor and element at the end for passably efficient solution.
