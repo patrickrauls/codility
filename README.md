@@ -69,3 +69,9 @@ Often these problems come down to figuring out what to ignore and what to take s
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingNZBABJ-G9M/)
 
 I took this problem pretty literally and set up actual counters the logged every occurrence of a particular integer. I also have a couple of variables I'll use to mark my highest counter `ceiling` as well as what my highest counter was at during the latest max counter operation `floor`. `floor` is useful during my loop only in terms of when I need to set it because the trigger of an element equal to `N + 1` has occurred. I also need to read it when I'm incrementing a counter in case that counter doesn't meet the floor. In that case I would set the counter equal to `floor + 1`. If I keep up with my changes in that way, I can set each element of the array to the Max of the floor and element at the end for passably efficient solution.
+
+### Day Eleven: Prefix Sums - Passing Cars
+
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingKMBDXG-5J4/)
+
+A pattern I noticed is that, because the cars are repressented as `0`s and `1`s the sum of the entire array is equal to the amount of cars heading west. But in order for those cars to contribute to a pair they need to be preceeded by a car heading east. As such I only need to care about the subset of the array beginning with the first `0`. After that I can sum the array. As I step through the array I know each time I find a `0` I can add the sum to my total of `passingCars`, and each time I find a `1` I need to decrement my sum. In the end I need to cap my passing cars at 1 billion and return a `-1` in that case, or else return the value in `passingCars`.
