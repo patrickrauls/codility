@@ -3,16 +3,10 @@
 
 const solution = A => {
     // write your code in JavaScript (Node.js 8.9.4)
+    let passingCars = 0;
     let array = A.slice(A.findIndex(el => el === 0));
     let sum = array.reduce((prev, curr) => prev + curr, 0);
-    let passingCars = 0;
-    array.forEach(car => {
-        if (car) {
-            sum--;
-        } else {
-            passingCars += sum;
-        }
-    });
+    array.forEach(car => car ? sum-- : passingCars += sum);
     return passingCars > 1000000000 ? -1 : passingCars;
 }
 
