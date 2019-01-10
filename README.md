@@ -72,6 +72,12 @@ I took this problem pretty literally and set up actual counters the logged every
 
 ### Day Eleven: Prefix Sums - Passing Cars
 
-[Find my answer on codility here](https://app.codility.com/demo/results/trainingKMBDXG-5J4/)
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingYMGVGU-W85/)
 
 A pattern I noticed is that, because the cars are repressented as `0`s and `1`s the sum of the entire array is equal to the amount of cars heading west. But in order for those cars to contribute to a pair they need to be preceeded by a car heading east. As such I only need to care about the subset of the array beginning with the first `0`. After that I can sum the array. As I step through the array I know each time I find a `0` I can add the sum to my total of `passingCars`, and each time I find a `1` I need to decrement my sum. In the end I need to cap my passing cars at 1 billion and return a `-1` in that case, or else return the value in `passingCars`.
+
+### Day Twelve: Prefix Sums - Genomic Range Query
+
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingKUD6TP-25Q/)
+
+This unit appears to be all about the efficiency that can be gained by totaling an array at the outset and executing operations afterward. I achieve this by first chronicling the change in nucleotide counts at each element in the array and store that in a variable called `genome`. After that I subtract the totals at the index indicated by `Q` from the totals at the index indicated by `P`. If there is an A I return 1, C, 2, and so forth.
