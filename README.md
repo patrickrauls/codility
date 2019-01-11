@@ -81,3 +81,9 @@ A pattern I noticed is that, because the cars are repressented as `0`s and `1`s 
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingKUD6TP-25Q/)
 
 This unit appears to be all about the efficiency that can be gained by totaling an array at the outset and executing operations afterward. I achieve this by first chronicling the change in nucleotide counts at each element in the array and store that in a variable called `genome`. After that I subtract the totals at the index indicated by `Q` from the totals at the index indicated by `P`. If there is an A I return 1, C, 2, and so forth.
+
+### Day Thirteen: Prefix Sums - Minimum Average Two Slice
+
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingU52VY4-8QA/)
+
+Start by considering what the definition of a slice is. In this case it is, at minimum, 2 elements on up to 10,000, max. But really anything larger than 3 elements can be divided in to multiple slices. If the slices are equal in average, the second slice is irrelevant to the question. If they are unequal in average, one slice is, by definition, greater in average and therefore irrelevant to the answer. With that established, I only need to care about slices of 2 or 3 elements. So I loop through the array checking the averages at each iteration of the element and its next 1 or 2 peers, returning the index only if the averages I find are smaller than any previous average I've found. It's not a particularly readable solution the way I've coded it, but I do achieve linear time complexity.
