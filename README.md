@@ -87,3 +87,9 @@ This unit appears to be all about the efficiency that can be gained by totaling 
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingU52VY4-8QA/)
 
 Start by considering what the definition of a slice is. In this case it is, at minimum, 2 elements on up to 10,000, max. But really anything larger than 3 elements can be divided in to multiple slices. If the slices are equal in average, the second slice is irrelevant to the question. If they are unequal in average, one slice is, by definition, greater in average and therefore irrelevant to the answer. With that established, I only need to care about slices of 2 or 3 elements. So I loop through the array checking the averages at each iteration of the element and its next 1 or 2 peers, returning the index only if the averages I find are smaller than any previous average I've found. It's not a particularly readable solution the way I've coded it, but I do achieve linear time complexity.
+
+### Day Fourteen: Prefix Sums - Count Div
+
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingMYCNS3-ABQ/)
+
+No loops necessary on this one. it can be done in constant time. The code isn't exactly self-documenting so let me walk you through it. Derive the lowest divisible integer in the range by subtracting the remainder of the first argument, `A` and the denominator, `K`, from `A`, then adding `K`, unless `A` is divisible by `K`, in which case `A` is obviously the lowest integer divisible by `K`. Now that we've found the lowest divisible integer, `lowest`, subtract it from the second argument, `B`. This gives you the range in which you can find divisible integers. Divide this by `K`, round down and add 1 to account for the `lowest` and you have your answer in constant time. 
