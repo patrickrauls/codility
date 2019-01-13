@@ -93,3 +93,9 @@ Start by considering what the definition of a slice is. In this case it is, at m
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingMYCNS3-ABQ/)
 
 No loops necessary on this one. it can be done in constant time. The code isn't exactly self-documenting so let me walk you through it. Derive the lowest divisible integer in the range by subtracting the remainder of the first argument, `A` and the denominator, `K`, from `A`, then adding `K`, unless `A` is divisible by `K`, in which case `A` is obviously the lowest integer divisible by `K`. Now that we've found the lowest divisible integer, `lowest`, subtract it from the second argument, `B`. This gives you the range in which you can find divisible integers. Divide this by `K`, round down and add 1 to account for the `lowest` and you have your answer in constant time. 
+
+### Day Fifteen: Sorting - Distinct
+
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingWSEZNK-KWG/)
+
+Not much to this one. Use your preferred method of deduping an array and grab the length of that. I like using [Sets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set). They only store unique values so it sort of does the work for me. I then return the size property of the set and I'm all done.
