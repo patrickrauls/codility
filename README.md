@@ -99,3 +99,9 @@ No loops necessary on this one. it can be done in constant time. The code isn't 
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingKBVZWM-SSV/)
 
 Not much to this one. Use your preferred method of deduping an array and grab the length of that. I like using [Sets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set). They only store unique values so it sort of does the work for me. I then return the size property of the set and I'm all done.
+
+### Day Sixteen: Sorting - Max Product of Three
+
+[Find my answer on codility](https://app.codility.com/demo/results/trainingWK89JG-C5H/)
+
+I think I've seen this one before. Sort the array. Generally the highest product you can get from 3 elements in a sorted array will be from the last 3 elements. The exception would be when there is at least 1 positive number and at least 2 negative numbers. In that case the product of those 3 could be numbers could be larger than the product of the of the 3 last elements. In a sorted array, those 3 elements would be the first 2 elements and the last element. Therefore I can return the max of the product of the last 3 elements and the product of the last and first 2 elements.
