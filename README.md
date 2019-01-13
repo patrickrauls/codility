@@ -96,6 +96,6 @@ No loops necessary on this one. it can be done in constant time. The code isn't 
 
 ### Day Fifteen: Sorting - Distinct
 
-[Find my answer on codility here](https://app.codility.com/demo/results/trainingWSEZNK-KWG/)
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingKBVZWM-SSV/)
 
 Not much to this one. Use your preferred method of deduping an array and grab the length of that. I like using [Sets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set). They only store unique values so it sort of does the work for me. I then return the size property of the set and I'm all done.
