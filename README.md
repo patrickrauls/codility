@@ -105,3 +105,11 @@ Not much to this one. Use your preferred method of deduping an array and grab th
 [Find my answer on codility](https://app.codility.com/demo/results/trainingWK89JG-C5H/)
 
 I think I've seen this one before. Sort the array. Generally the highest product you can get from 3 elements in a sorted array will be from the last 3 elements. The exception would be when there is at least 1 positive number and at least 2 negative numbers. In that case the product of those 3 could be numbers could be larger than the product of the of the 3 last elements. In a sorted array, those 3 elements would be the first 2 elements and the last element. Therefore I can return the max of the product of the last 3 elements and the product of the last and first 2 elements.
+
+### Day Seventeen: Sorting - Triangle
+
+[Find my answer on codility](https://app.codility.com/demo/results/training7JMRE2-RVM/)
+
+I start by ruling out some of the constraints as irrelevant, superfluous, or inevitable given the other constraints. First, the constraint that the index `P` is at least `0` and less than `Q`, and `Q` is less than `R`, and `R` is less than the length, `N`, of the given array. Any set of 3 valid, unique indices, satisfies this, given that the values at these indices will be treated the same--which they will. Therefore the constraint is irrelevant except to inform me that `P`, `Q`, and `R` must be unique, valid indices.
+From here I like to sort the array. This makes it easier for me to rule out other constraints. When observing three elements in a sorted array, the sum of the later two elements will always be greater than the first. In other words `A[Q] + A[R] > A[P]` is inevitable. I needn't think about it. Because the array is sorted, I know that `A[Q]` is at least as big as `A[P]`. Now I can check if `A[P] + A[Q] > A[R]`, and `return 1` if it is true, knowing that the third constraint, that `A[P] + A[R] > A[Q]`, is superfluous as it is always true if the second constraint is true.
+Because a triangular triplet would occur in adjacent elements before anywher else, as those numbers are closer together, I can place this conditional in a loop. Outside of the loop I `return 0`.
