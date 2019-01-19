@@ -131,3 +131,10 @@ I'd like to think this is a pretty accessible approach. With such a limited set 
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingY77SZH-EF4/)
 
 Might take another pass at this one because I don't like doing loops inside of loops. But this particular case isn't so bad as it still ends up at linear complexity because of the way things get eliminated. Essentially I separate the fish into stacks, one for upstream and one for downstream. If it happens to be an upstream fish, I make it fight all the previous downstream fish and the loser gets popped off the stack. I then return the length of the two stacks.
+
+### Day Twenty-one: Stacks and Queues - Nesting
+
+[Find my answer on codility here]
+(https://app.codility.com/demo/results/trainingNBHX3C-VK6/)
+
+Straightforward enough. Make an empty `stack`. Loop through the string. If you come across a `'('`, `push` it onto the `stack`. Otherwise, as long as the `stack` isn't already empty, `pop` the last value off the `stack`. If the `stack` is already empty and you come across a character that is not a `'('`, you can `return 0` as you know the string `S` is improperly nested. In the end if there is anything left in the `stack`, `return 0` because it's improperly nested, otherwise, `return 1`.
