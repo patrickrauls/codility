@@ -134,7 +134,6 @@ Might take another pass at this one because I don't like doing loops inside of l
 
 ### Day Twenty-one: Stacks and Queues - Nesting
 
-[Find my answer on codility here]
-(https://app.codility.com/demo/results/trainingNBHX3C-VK6/)
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingNBHX3C-VK6/)
 
 Straightforward enough. Make an empty `stack`. Loop through the string. If you come across a `'('`, `push` it onto the `stack`. Otherwise, as long as the `stack` isn't already empty, `pop` the last value off the `stack`. If the `stack` is already empty and you come across a character that is not a `'('`, you can `return 0` as you know the string `S` is improperly nested. In the end if there is anything left in the `stack`, `return 0` because it's improperly nested, otherwise, `return 1`.
