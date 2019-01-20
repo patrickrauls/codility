@@ -137,3 +137,9 @@ Might take another pass at this one because I don't like doing loops inside of l
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingNBHX3C-VK6/)
 
 Straightforward enough. Make an empty `stack`. Loop through the string. If you come across a `'('`, `push` it onto the `stack`. Otherwise, as long as the `stack` isn't already empty, `pop` the last value off the `stack`. If the `stack` is already empty and you come across a character that is not a `'('`, you can `return 0` as you know the string `S` is improperly nested. In the end if there is anything left in the `stack`, `return 0` because it's improperly nested, otherwise, `return 1`.
+
+### Day Twenty-two: Stacks and Queues - Stone Wall
+
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingE9BBMH-T99/)
+
+Hold an accumulator of `stones` in a variable you'll return at the end. You'll also need an empty `queue`. Loop through the array `H`. If the `stone` is greater than the previous stone, increment `stones`. If the `stone` is less than the previous stone, pop it off the `queue` and continue popping off the end of the `queue` until you hit a stone that isn't larger than `stone`. If you completely deplete the `queue`, or if the final stone in the `queue` is less than `stone` increment `stones`. At the end of the iteration, push the `stone` on to the `queue`. `return stones` at the end and you should achieve the solution in linear time.
