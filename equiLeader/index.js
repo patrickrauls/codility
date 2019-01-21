@@ -1,16 +1,13 @@
 const solution = A => {
-  let leader;
+  let leader, remaining;
   let leaders = [];
-  let remaining;
+  let candidates = {};
   let seen = 0;
-  const candidates = A.reduce((acc, val) => {
-    if (!acc[val]) {
-      return { ...acc, [val]: 1 };
-    } else if (acc[val] === Math.floor(A.length / 2)) {
-      leader = val;
-    }
-    return { ...acc, [val]: acc[val] + 1 };
-  }, {});
+  for (let i = 0; i < A.length; i++) {
+    if (!candidates[A[i]]) candidates[A[i]] = 1;
+    else candidates[A[i]]++;
+    if (candidates[A[i]] > A.length / 2) leader = A[i];
+  };
   remaining = candidates[leader];
   A.forEach((integer, index) => {
     if (integer === leader) {
