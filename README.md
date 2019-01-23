@@ -155,3 +155,9 @@ You'll need a few accumulators here. An array to hold the equi `leaders`, an obj
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingMD7JTJ-K6X/)
 
 One way of going about this is to first find the `dominator` by counting up all the occurences of each integer in a forEach and also checking in that iteration if you've reached the threshold of more than half the length of the given array `A`. If you get there, plug it in to `dominator`. Outside the loop `return` the `indexOf` the `dominator`. That should get you the solution in linear time complexity.
+
+### Day Twenty-five: Maximum Slice Problem - Max Sum Slice
+
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingW83NGW-52B/)
+
+With these continuous slice problems it's basically always loop through the array and give the option of either adding the element to an existing max or min, or starting over with the element. This problem is no different. Create a couple of variables, one to hold the reigning `max` and the other to hold the current `slice`. In my case I started each as equal to the first element in the array. Loop through the array. Because I started with the first element, I start my loop at the second element as seen with the `i = 1` in my for loop statement. In the loop each `slice` has to either build on itself by adding the current element `A[i]` or start over by setting the slice equal to `A[i]`. Then I reassign `max` to equal the maximum of `max` and `slice`. `return max` for a solution in linear time complexity.
