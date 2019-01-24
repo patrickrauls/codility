@@ -161,3 +161,9 @@ One way of going about this is to first find the `dominator` by counting up all 
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingW83NGW-52B/)
 
 With these continuous slice problems it's basically always loop through the array and give the option of either adding the element to an existing max or min, or starting over with the element. This problem is no different. Create a couple of variables, one to hold the reigning `max` and the other to hold the current `slice`. In my case I started each as equal to the first element in the array. Loop through the array. Because I started with the first element, I start my loop at the second element as seen with the `i = 1` in my for loop statement. In the loop each `slice` has to either build on itself by adding the current element `A[i]` or start over by setting the slice equal to `A[i]`. Then I reassign `max` to equal the maximum of `max` and `slice`. `return max` for a solution in linear time complexity.
+
+### Day Twenty-six: Maximum Slice Problem - Max Profit
+
+[Find my answer on codility here](https://app.codility.com/demo/results/trainingQ8BDMX-QDY/)
+
+This problem assumes you can sell instantly after buying, placing the minimum possible profit at 0. Set a variable `maxProfit` to `0`. Set a `buy` variable to the first element in array `A`. Now loop through the array, everything but the first variable as that's already included in `buy`. If you reassign `maxProfit` to the greater of itself and the current element `A[i]` minus `buy`, and afterward reassign `buy` to the minimum of the current element `A[i]` and `buy`, `maxProfit` will hold the highest possible profit after the loop is done.
