@@ -167,3 +167,9 @@ With these continuous slice problems it's basically always loop through the arra
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingQ8BDMX-QDY/)
 
 This problem assumes you can sell instantly after buying, placing the minimum possible profit at 0. Set a variable `maxProfit` to `0`. Set a `buy` variable to the first element in array `A`. Now loop through the array, everything but the first variable as that's already included in `buy`. If you reassign `maxProfit` to the greater of itself and the current element `A[i]` minus `buy`, and afterward reassign `buy` to the minimum of the current element `A[i]` and `buy`, `maxProfit` will hold the highest possible profit after the loop is done.
+
+### Day Twenty-seven: Maximum Slice Problem - Max Double Slice Sum
+
+[Find my answer on codility here](https://app.codility.com/demo/results/training3RJWFZ-BY4/)
+
+The only way I could think to do this is to create a couple of arrays, `prefixes` and `suffixes` the same length as our given array `A` and full of `0`s, and a variable `max` we'll return in the end. For now `max` will be equal to `0`, as a triplet can be made to include no elements. Now we need to do 3 loops, the first one will find the maximum sum possible at every `i` using the same method of the previous two problems, and plug it into our `prefixes`. Next we'll do the same but in reverse and plug the answers into our `suffixes`. Now here is where the magic happens. In our final loop we'll use a similar method to find the maximum combination of prefix and suffix, making sure that they are separated by an element, as that's how these triplets work.
