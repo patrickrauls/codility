@@ -183,5 +183,6 @@ When counting factors consider that every factor of a number `N` has a counterpa
 ### Day Twenty-nine: Prime and Composite Numbers - Min Perimeter Rectangle
 
 [Find my answer on codility here](https://app.codility.com/demo/results/trainingSQ3FGD-5HB/)
+[also thought I'd solve it in java here](https://app.codility.com/demo/results/trainingV35UB8-6Q6/)
 
 The smallest perimeter rectangles are squares. And we want to find the smallest perimeter. So we want to find the closest thing to a square we can get with only integers as sides. The most efficient way is to start from the closest integer in the square root, `i` and work `i` down to `1` in a while loop. `if` there is a remainder when dividing `N` by `i`, it is not a factor of the area `N` and therefore can not be multiplied with another integer to create the area. Decrement `i` in this case. `else`, you have found your first side. Add it to `N / i`, which is necessarily your other side, and multiply by `2` and you have found your solution in square root time complexity.
