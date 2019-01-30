@@ -191,3 +191,9 @@ The smallest perimeter rectangles are squares. And we want to find the smallest 
 ### Day Thirty: Prime and Composite Numbers - Peaks
 
 [Find my answer on codility here](https://app.codility.com/demo/results/training7H85F5-BHM/)
+
+### Day Thirty-one:
+
+### Day Thirty-two:
+
+### Day Thirty-three:
